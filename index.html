@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overthink-O-Matic 🎄</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div id="snow-container"></div>
+
+<div class="mirror-ball">🪩</div>
+
+<div class="app" id="appBox">
+  <div class="tree">🎄</div>
+
+  <h1>Overthink-O-Matic</h1>
+  <p class="tagline">Christmas Edition 🧠❄️</p>
+
+  <textarea id="input"
+    placeholder="What are you overthinking about? I promise to make it worse..."></textarea>
+
+  <button id="startBtn">Start Overthinking</button>
+</div>
+
+<div id="popup-container"></div>
+
+<!-- FINAL POPUP -->
+<div id="chill-popup" class="chill hidden">
+  <div class="end-card">
+    <div class="pill">💊❄️</div>
+    <h2>Hey cutie, breathe 😌</h2>
+    <p>You overthought absolutely nothing.</p>
+    <p>Take a chill pill and vibe 🎄</p>
+
+    <button onclick="resetAll()" class="chill-btn">
+      Okay sweetie 😌
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

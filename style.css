@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+*{font-family:'Inter',sans-serif;box-sizing:border-box}
+
+body{
+  margin:0;
+  background:radial-gradient(circle at top,#0f3d2e,#051f17);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  color:white;
+}
+
+/* Hidden Class */
+.hidden{
+  display:none!important;
+  opacity:0;
+  pointer-events:none;
+}
+
+/* Snow */
+#snow-container span{
+  position:fixed;
+  top:-10px;
+  color:white;
+  opacity:.8;
+  animation:fall linear infinite;
+}
+@keyframes fall{to{transform:translateY(110vh)}}
+
+/* Card */
+.app{
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(10px);
+  padding:2rem;
+  border-radius:20px;
+  width:92%;
+  max-width:480px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+.tree{font-size:3.4rem}
+
+textarea{
+  width:100%;
+  min-height:90px;
+  border-radius:12px;
+  padding:1rem;
+  border:none;
+  font-size:1rem;
+}
+
+button{
+  width:100%;
+  padding:.9rem;
+  border-radius:12px;
+  border:none;
+  background:linear-gradient(135deg,#ff3c3c,#ff8c00);
+  color:white;
+  font-weight:900;
+  cursor:pointer;
+}
+button:hover{transform:scale(1.02)}
+
+/* Popup bubbles */
+#popup-container{
+  position:fixed;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:5;
+}
+
+.popup{
+  position:absolute;
+  padding:12px 18px;
+  border-radius:18px;
+  font-weight:700;
+  color:white;
+  border:2px solid #ffffff60;
+  box-shadow:0 0 18px #ffffff70;
+  backdrop-filter:blur(6px);
+  animation:pop .2s linear;
+  font-size:.95rem;
+}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+
+.popup.red{background:linear-gradient(135deg,#ff2e2e,#ff7b39)}
+.popup.green{background:linear-gradient(135deg,#1faa4b,#3cff88)}
+.popup.gold{background:linear-gradient(135deg,#ffcf33,#ffae00)}
+
+.shiver{animation:shake .2s infinite}
+@keyframes shake{
+  0%{transform:translateX(0)}
+  50%{transform:translateX(-3px)}
+  100%{transform:translateX(3px)}
+}
+
+/* CHAOS */
+.flash{animation:flash .3s}
+@keyframes flash{
+  0%{filter:brightness(1)}
+  50%{filter:brightness(3)}
+  100%{filter:brightness(1)}
+}
+
+.trr{animation:screen .35s}
+@keyframes screen{
+  0%{transform:translate(0)}
+  25%{transform:translate(6px)}
+  50%{transform:translate(-6px)}
+  75%{transform:translate(4px)}
+  100%{transform:translate(0)}
+}
+
+/* End Popup */
+.chill{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:#000000a8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:20;
+}
+
+.end-card{
+  background:linear-gradient(135deg,#004d2f,#00794c);
+  padding:30px;
+  border-radius:18px;
+  width:300px;
+  text-align:center;
+  box-shadow:0 0 30px #00ffaa70;
+}
+
+.chill-btn{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:12px;
+  width:100%;
+  background:linear-gradient(135deg,#ff3b3b,#ff8d2c);
+  color:white;
+  font-size:1rem;
+  font-weight:800;
+}
+
+/* Mirror Ball */
+.mirror-ball{
+  position:fixed;
+  top:15px;
+  right:20px;
+  font-size:45px;
+  animation:spin 3s linear infinite, glow 2s ease-in-out infinite;
+}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes glow{
+  0%{filter:brightness(1)}
+  50%{filter:brightness(1.7)}
+  100%{filter:brightness(1)}
+}
